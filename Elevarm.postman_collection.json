@@ -1,0 +1,698 @@
+{
+	"info": {
+		"_postman_id": "31fdef9b-8393-442c-a3ca-f6410dcb9303",
+		"name": "Elevarm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10570582"
+	},
+	"item": [
+		{
+			"name": "POST /register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "oke@mantap.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "asus",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "okelahkalo",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "1999-09-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "oke@oke.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5nZW50b3QiLCJlbWFpbCI6Im1hbWFAbWFpbC5jb20iLCJpZCI6IjY0MGVmYzVkZTU4YWJkYjdhZjE3M2M2MiIsImlhdCI6MTY3ODcwNjUwOCwiZXhwIjoxNjc4NzYwNTA4fQ.jUj9-3imISlRcfDs21vA3n0H3vDyHZXd_0pMFp-PN-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5nZW50b3QiLCJlbWFpbCI6Im1hbWFAbWFpbC5jb20iLCJpZCI6IjY0MGVmYzVkZTU4YWJkYjdhZjE3M2M2MiIsImlhdCI6MTY3ODcwNjUwOCwiZXhwIjoxNjc4NzYwNTA4fQ.jUj9-3imISlRcfDs21vA3n0H3vDyHZXd_0pMFp-PN-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Haidar123",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "1998-08-15",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5nZW50b3QiLCJlbWFpbCI6Im1hbWFAbWFpbC5jb20iLCJpZCI6IjY0MGVmYzVkZTU4YWJkYjdhZjE3M2M2MiIsImlhdCI6MTY3ODcxMzkyNSwiZXhwIjoxNjc4NzY3OTI1fQ.qqf_Uv4hwcVP2XIuJuCTuSYrbRjNgimODLW4eUnK-cE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oldPassword",
+							"value": "pass123",
+							"type": "text"
+						},
+						{
+							"key": "newPassword",
+							"value": "hello123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /order-finished",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412aeb7d9edba6519b24116",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oldPassword",
+							"value": "pass123",
+							"type": "text"
+						},
+						{
+							"key": "newPassword",
+							"value": "hello123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/order-finished",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order-finished"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /ride-finished",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412aeb7d9edba6519b24116",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oldPassword",
+							"value": "pass123",
+							"type": "text"
+						},
+						{
+							"key": "newPassword",
+							"value": "hello123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/ride-finished",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ride-finished"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaGthbG8iLCJlbWFpbCI6Im9rZUBtYW50YXAuY29tIiwiaWQiOiI2NDEyYThmZmY5MjY0NGQyNWZmNTZiYzkiLCJpYXQiOjE2Nzg5NDQ1MTEsImV4cCI6MTY3ODk5ODUxMX0.6XLyIqA6n_vWCRyku7sdQyW-FkjpcDDqXuFWwj9ArI0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fromMerchant",
+							"value": "Ikan bakar",
+							"type": "text"
+						},
+						{
+							"key": "toWhere",
+							"value": "Kantor",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "9000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/order-food",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order-food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /order-ride",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fromWhere",
+							"value": "Rumah",
+							"type": "text"
+						},
+						{
+							"key": "toWhere",
+							"value": "Kantor",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "9000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/order-ride",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order-ride"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /order-list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412aeb7d9edba6519b24116",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/order-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /ride-list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412aeb7d9edba6519b24116",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/ride-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ride-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /order-detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412bee3c0bbe266cd9ac999",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/order-detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order-detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /ride-detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412c043bca9a6ce28d108c6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/ride-detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ride-detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /update-order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412bee3c0bbe266cd9ac999",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fromMerchant",
+							"value": "Ayam goreng upil",
+							"type": "text"
+						},
+						{
+							"key": "toWhere",
+							"value": "Kantor",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /update-ride",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412bffb0bc6294defaf2ca9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fromWhere",
+							"value": "Ayam goreng upil",
+							"type": "text"
+						},
+						{
+							"key": "toWhere",
+							"value": "Kantor",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-ride",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-ride"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /delete-order-food",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412bafaf52521328e2db7b3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/delete-order-food",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-order-food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /delete-order-ride",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9rZWxhaCIsImVtYWlsIjoib2tlQG9rZS5jb20iLCJpZCI6IjY0MTJhOGUwNjY1NmIzOWI4NzA3NzY2NSIsImlhdCI6MTY3ODk0NTg5NCwiZXhwIjoxNjc4OTk5ODk0fQ.4mUyLzzHCLJVguft-Z_GIJR1-DiiXp9PgBeGy3FRVYY",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "6412bafaf52521328e2db7b3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/delete-order-ride",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-order-ride"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
